@@ -1,5 +1,4 @@
 import React from 'react';
-import { Header } from './header.jsx';
 
 export const Layout = ( { header, content } ) => (
   <div>
@@ -9,7 +8,7 @@ export const Layout = ( { header, content } ) => (
 );
 
 export const Main = () => (
-  <div>
+  <div className="container">
     <h1>Main</h1>
   </div>
 );

@@ -1,7 +1,6 @@
 import React from 'react';
 
-export const Header = () => (
-
+const MainHeader = ({ user }) => (
   <nav className="navbar navbar-default">
     <div className="container-fluid">
 
@@ -33,12 +32,16 @@ export const Header = () => (
           </li>
         </ul>
 
-        <ul className="nav navbar-nav navbar-right">
-          <li><a href="/profile">Profile</a></li>
-        </ul>
+        { user ? 
+          <ul className="nav navbar-nav navbar-right">
+            <li><a href="/profile">Profile</a></li>
+          </ul>
+        :
+          ""
+        }
       </div>
     </div>
   </nav>
-
-
 );
+
+export default MainHeader;

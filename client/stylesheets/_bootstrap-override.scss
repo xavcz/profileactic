@@ -1,0 +1,54 @@
+.navbar-default {
+  background-color: $vd-blue;
+  border-color: $blue;
+  .navbar-brand {
+    color: $blue;
+    &:hover, &:focus { 
+      color: $vd-blue; }}
+  .navbar-text {
+    color: $blue; }
+  .navbar-nav {
+    a, .navbar-brand { font-size: 2rem; }
+    > li {
+      > a {
+        color: $blue;
+        &:hover,  &:focus {
+          color: lighten($vd-blue, 10%); }}}
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: lighten($vd-blue, 10%);
+        background-color: $blue; }}
+    > .open {
+      > a, > a:hover, > a:focus {
+        color: lighten($vd-blue, 10%);
+        background-color: $blue; }}}
+  .navbar-toggle {
+    border-color: $blue;
+    &:hover, &:focus {
+      background-color: $blue; }
+    .icon-bar {
+      background-color: $blue; }}
+  .navbar-collapse,
+  .navbar-form {
+    border-color: $blue; }
+  .navbar-link {
+    color: $blue;
+    &:hover {
+      color: lighten($vd-blue, 10%); }}}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu {
+    > li > a {
+      color: $blue;
+      &:hover, &:focus {
+        color: lighten($vd-blue, 10%); }}
+    > .active {
+      > a, > a:hover, > a:focus, {
+        color: lighten($vd-blue, 10%);
+        background-color: $blue; }}}
+}
+
+.navbar, .navbar-default, .navbar .navbar-default {
+  border-radius: 0;
+  border: none;
+}
+
