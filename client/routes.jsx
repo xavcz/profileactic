@@ -1,13 +1,16 @@
-import React from 'react';
+import React                from 'react';
+import { FlowRouter } from 'meteor/kadira:flow-router';
 import { mount } from 'react-mounter';
-import { Layout, Main } from './app.jsx';
-import { MainHeader } from './containers/main_header';
+
+import App from './App.jsx';
+import Main from './containers/Main.jsx';
+import MainHeaderContainer from './containers/headers/MainHeaderContainer.jsx';
 
 FlowRouter.route( '/', {
   name: 'Main',
   action() {
-    mount( Layout, {
-      header:   (<MainHeader />),
+    mount( App, {
+      header:   (<MainHeaderContainer />),
       content:  (<Main />)
     });
   }
