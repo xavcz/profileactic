@@ -15,6 +15,7 @@ class MainHeaderContainer extends React.Component {
       if (error) console.log(error);
       console.log('logging out');
       FlowRouter.go("/");
+      FlowRouter.reload();
     });
   }
 
