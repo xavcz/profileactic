@@ -1,5 +1,10 @@
-// Meteor.publish('usersUrls', function() {
-//   const userId = this.userId;
-//   const selector = { userId: userId };
-//   return UsersUrls.find(selector);
-// });
+import { Meteor } from 'meteor/meteor';
+
+Meteor.publish('userData', function( userId ) {
+  check( userId, String );
+  if ( userId ) {
+    return Meteor.users.find({ _id: userId });
+  } else {
+    this.ready();
+  }
+});

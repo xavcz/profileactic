@@ -13,7 +13,6 @@ class MainHeaderContainer extends React.Component {
   onLogOut() {
     Meteor.logout( ( error, success ) => {
       if (error) console.log(error);
-      console.log('logging out');
       FlowRouter.go("/");
       FlowRouter.reload();
     });

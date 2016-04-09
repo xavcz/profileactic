@@ -24,4 +24,4 @@ accounts-password
 audit-argument-checks
 kadira:dochead
 static-html
-react-meteor-data
+aldeed:simple-schema
