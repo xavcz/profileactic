@@ -1,9 +1,13 @@
 import { Meteor }         from 'meteor/meteor';
 import { SimpleSchema }   from 'meteor/aldeed:simple-schema';
 
-const UserProfiles = new Meteor.Collection( 'userProfiles' );
+export const UserProfiles = new Meteor.Collection( 'userProfiles' );
 
 UserProfiles.Schema = new SimpleSchema({
+  userId: {
+    type: String,
+    label: 'User ID'
+  },
   name: {
     type: String,
     label: 'Name',
@@ -22,6 +26,12 @@ UserProfiles.Schema = new SimpleSchema({
     max: 500
   }
 });
+
+UserProfiles.publicFields = {
+  name: 1,
+  description: 1,
+  pictureUrl: 1
+}
 
 UserProfiles.allow({
   insert() { return false; },

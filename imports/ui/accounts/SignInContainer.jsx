@@ -1,6 +1,6 @@
 import React          from 'react';
 import { FlowRouter } from 'meteor/kadira:flow-router';
-import SignIn         from '../../components/accounts/SignIn.jsx';
+import SignIn         from '/imports/ui/accounts/SignIn.jsx';
 
 class SignInContainer extends React.Component {
   constructor( props ) {
