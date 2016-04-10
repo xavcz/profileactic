@@ -25,7 +25,6 @@ class SignUpContainer extends React.Component {
         console.log(err);
       } else {
         createProfile.call({
-            userId: Meteor.userId(),
             name: "Maciej"
           }, (err, res) => {
             if (err) {

@@ -6,7 +6,8 @@ export const UserProfiles = new Meteor.Collection( 'userProfiles' );
 UserProfiles.Schema = new SimpleSchema({
   userId: {
     type: String,
-    label: 'User ID'
+    label: 'User ID',
+    optional: true
   },
   name: {
     type: String,
