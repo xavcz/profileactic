@@ -5,20 +5,18 @@ import { UserProfiles }     from './collections';
 export const createProfile = new ValidatedMethod({
   name: 'UserProfiles.createProfile',
   validate: UserProfiles.Schema.validator(),
-  run({ name, description = '', pictureUrl = '' }) {
+  run({ userId, name, description = '', pictureUrl = '' }) {
+    if (Meteor.isServer) {
       const profile = {
-        userId: this.userId,
-        name,
-        description,
-        pictureUrl
-      };
-      console.log(profile);
+          userId,
+          name,
+          description,
+          pictureUrl
+        };
 
-      if (Meteor.isServer) {
-        return UserProfiles.insert( profile );
-        console.log("server!");
-      } else {
-        console.log('client!');
-      }
+      console.log('profile', profile);
+
+      return UserProfiles.insert( profile );
+    }
   }
 });

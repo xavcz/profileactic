@@ -24,16 +24,6 @@ class SignUpContainer extends React.Component {
       if ( err ) {
         console.log(err);
       } else {
-        createProfile.call({
-            name: "Maciej"
-          }, (err, res) => {
-            if (err) {
-              console.log(err);
-            } else {
-              console.log('Profile for user created successfully.');
-            }
-        });
-
         FlowRouter.go('/');
       }
     });
