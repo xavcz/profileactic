@@ -21,7 +21,6 @@ twbs:bootstrap
 kadira:flow-router
 check
 accounts-password
-audit-argument-checks
 kadira:dochead
 static-html
 aldeed:simple-schema
